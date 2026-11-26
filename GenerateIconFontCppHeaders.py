@@ -1,5 +1,5 @@
 # Convert Font Awesome, Fork Awesome, Google Material Design, Pictogrammers Material Design Icons, Kenney Game, 
-# Fontaudio, Codicons and Lucide icon font parameters to C, C++, C#, Python, Rust and Go compatible formats.
+# Fontaudio, Codicons, Lucide and Remix Icon icon font parameters to C, C++, C#, Python, Rust and Go compatible formats.
 #
 #------------------------------------------------------------------------------
 #
@@ -94,6 +94,12 @@
 #           https://github.com/lucide-icons/lucide
 #           https://unpkg.com/lucide-static@latest/font/lucide.css
 #           https://unpkg.com/lucide-static@latest/font/lucide.ttf
+#
+#   1.9 - Remix Icon [ RI ]
+#           https://remixicon.com
+#           https://github.com/Remix-Design/RemixIcon
+#           https://unpkg.com/remixicon@latest/fonts/remixicon.css
+#           https://unpkg.com/remixicon@latest/fonts/remixicon.ttf
 #
 #
 #------------------------------------------------------------------------------
@@ -543,6 +549,14 @@ class FontCI( FontKI ):               # Codicons
     ttfs = [[ font_abbr, 'codicon.ttf', 'https://microsoft.github.io/vscode-codicons/dist/codicon.ttf' ]]
 
 
+class FontRI( FontKI ):                # Remix Icon
+    font_name = 'Remix'
+    font_abbr = 'RI'
+    font_data_prefix = '.ri-'
+    font_data = 'https://unpkg.com/remixicon@latest/fonts/remixicon.css'
+    ttfs = [[ font_abbr, 'remixicon.ttf', 'https://unpkg.com/remixicon@latest/fonts/remixicon.ttf' ]]
+
+
 class FontLC( FontMDI ):               # Lucide
     font_name = 'Lucide'
     font_abbr = 'LC'
@@ -915,7 +929,7 @@ class LanguageGo( Language ):
 # Main
 
 
-fonts = [ FontFA4, FontFA5, FontFA5Brands, FontFA5Pro, FontFA5ProBrands, FontFA6, FontFA6Brands, FontFA7, FontFA7Brands, FontFK, FontMD, FontMS, FontMDI, FontKI, FontFAD, FontCI, FontLC ]
+fonts = [ FontFA4, FontFA5, FontFA5Brands, FontFA5Pro, FontFA5ProBrands, FontFA6, FontFA6Brands, FontFA7, FontFA7Brands, FontFK, FontMD, FontMS, FontMDI, FontKI, FontFAD, FontCI, FontLC, FontRI ]
 languages = [ LanguageC, LanguageCSharp, LanguagePython, LanguageRust, LanguageGo ]
 ttf2headerC = False # convert ttf files to C and C++ headers
 
